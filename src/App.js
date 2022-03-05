@@ -1,5 +1,4 @@
-import logo from پچ لباسlogo.svg';
-import './App.css';
+import logo from './logo.svg';
 import Header from './components/Header';
 
 function App() {
