@@ -3,6 +3,10 @@ import styled from "styled-components";
 import PinterestIcon from "@material-ui/icons/Pinterest";
 import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import FaceIcon from "@material-ui/icons/Face";
+import TextsmsIcon from "@material-ui/icons/Textsms"
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
 function Header() {
   return (
@@ -29,7 +33,20 @@ function Header() {
           </form>
         </SearchBarWrapper>
       </SearchWrapper>
-      {/* <IconsWrapper></IconsWrapper> */}
+      <IconsWrapper>
+        <IconButton>
+          <NotificationsIcon />
+        </IconButton>
+        <IconButton>
+          <TextsmsIcon />
+        </IconButton>
+        <IconButton>
+          <FaceIcon />
+        </IconButton>
+        <IconButton>
+          <KeyboardArrowDownIcon />
+        </IconButton>
+      </IconsWrapper>
     </Wrapper>
   );
 }
@@ -120,3 +137,7 @@ const SearchBarWrapper = styled.div`
     outline: none;
   }
 `;
+
+const IconsWrapper = styled.div`
+
+`

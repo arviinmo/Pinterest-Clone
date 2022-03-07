@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import Header from './components/Header';
+import Mainboard from './components/Mainboard';
 
 function App() {
   return (
