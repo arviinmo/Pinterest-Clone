@@ -8,8 +8,17 @@ import FaceIcon from "@material-ui/icons/Face";
 import TextsmsIcon from "@material-ui/icons/Textsms";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
-function Header() {
+props: {
+  onSubmit: onSearchSubmit()
+}
+
+function Header(props) {
   const [input, setInput] = useState("");
+
+  const onSearchSubmit = (e) => {
+    e.preventDefault();
+    props.onSubmit(input)
+  };
 
   return (
     <Wrapper>
@@ -31,7 +40,7 @@ function Header() {
           </IconButton>
           <form>
             <input type="text" onChange={(e) => setInput(e.target.value)} />
-            <button type="submit"></button>
+            <button type="submit" onClick={onSearchSubmit}></button>
           </form>
         </SearchBarWrapper>
       </SearchWrapper>
