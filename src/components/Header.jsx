@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PinterestIcon from "@material-ui/icons/Pinterest";
 import IconButton from "@material-ui/core/IconButton";
+import SearchIcon from "@material-ui/icons/Search";
 
 function Header() {
   return (
@@ -19,9 +20,9 @@ function Header() {
       </FollowingButton>
       <SearchWrapper>
         <SearchBarWrapper>
-          {/* <IconButton>
+          <IconButton>
             <SearchIcon />
-          </IconButton> */}
+          </IconButton>
           <form>
             <input type="text" />
             <button type="submit"></button>
@@ -64,7 +65,7 @@ const HomeButtons = styled.div`
 
 const HomePageButton = styled(HomeButtons)`
   background-color: rgb(17, 17, 17);
-  
+
   a {
     text-decoration: none;
     color: white;
@@ -97,4 +98,25 @@ const SearchBarWrapper = styled.div`
   border-radius: 50px;
   border: none;
   padding-left: 10px;
+
+  form {
+    display: flex;
+    flex: 1;
+  }
+
+  form > input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    margin-left: 5px;
+    font-size: 16px;
+  }
+
+  form > button {
+    display: none;
+  }
+
+  input:focus {
+    outline: none;
+  }
 `;
