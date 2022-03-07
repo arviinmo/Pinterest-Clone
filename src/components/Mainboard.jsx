@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Pin from "./Pin";
 
 function Mainboard() {
   return (
@@ -16,7 +17,7 @@ export default Mainboard;
 const Wrapper = styled.div`
   height: 400px;
   width: 100%;
-  background-color: blue;
+  background-color: white;
   display: flex;
   justify-content: center;
 `;
@@ -24,5 +25,5 @@ const Wrapper = styled.div`
 const Container = styled.div`
   display: flex;
   width: 90%;
-  background-color: green;
+  background-color: white;
 `;

@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import PinterestIcon from "@material-ui/icons/Pinterest";
 import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import FaceIcon from "@material-ui/icons/Face";
-import TextsmsIcon from "@material-ui/icons/Textsms"
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import TextsmsIcon from "@material-ui/icons/Textsms";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 function Header() {
+  const [input, setInput] = useState("");
+
   return (
     <Wrapper>
       <LogoWrapper>
@@ -28,7 +30,7 @@ function Header() {
             <SearchIcon />
           </IconButton>
           <form>
-            <input type="text" />
+            <input type="text" onChange={(e) => setInput(e.target.value)} />
             <button type="submit"></button>
           </form>
         </SearchBarWrapper>
@@ -138,6 +140,4 @@ const SearchBarWrapper = styled.div`
   }
 `;
 
-const IconsWrapper = styled.div`
-
-`
+const IconsWrapper = styled.div``;
